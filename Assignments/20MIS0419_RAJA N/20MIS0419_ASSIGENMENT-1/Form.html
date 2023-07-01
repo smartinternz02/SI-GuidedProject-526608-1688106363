@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+	<style type="text/css">
+		span{
+			color: red;
+		}
+	</style>
+	<script type="text/javascript" src="Form.js"></script>
+</head>
+<body>
+	<table>
+		<form name="f" onsubmit="return form()" action="display.html" method="post" target="_blank">
+			<tr>
+				<th><b>Sign Up</b></th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>User ID [5-7 char]</td>
+				<td><input type="text" id="u" placeholder="Enter Your UserID"></td>
+				<td><span id="u1"></span></td>
+			</tr>
+			<tr>
+				<td>Password [7-12 char]</td>
+				<td><input type="text" id="p" placeholder="Enter Your Password"></td>
+				<td><span id="p1"></span></td>
+			</tr>
+			<tr>
+				<td>Name [Alphabates]</td>
+				<td><input type="text" id="n" placeholder="Enter Your Name"></td>
+				<td><span id="n1"></span></td>
+			</tr>
+			<tr>
+				<td>Address [Alphanumaric]</td>
+				<td><input type="text" id="a" placeholder="Enter Your Address"></td>
+				<td><span id="a1"></span></td>
+			</tr>
+			<tr>
+				<td>Country [Must]</td>
+				<td><select id="c">
+					<option value="-1">--select--</option>
+					<option value="1">USA</option>
+					<option value="2">China</option>
+					<option value="3">Japon</option>
+					<option value="3">India</option>
+				</select></td>
+				<td><span id="c1"></span></td>
+			</tr>
+			<tr>
+				<td>ZIP Code [Alphanumaric]</td>
+				<td><input type="text" id="z" placeholder="Enter Your ZIP Code"></td>
+				<td><span id="z1"></span></td>
+			</tr>
+			<tr>
+				<td>Email [Valid Email]</td>
+				<td><input type="text" id="e" placeholder="Enter Your Email"></td>
+				<td><span id="e1"></span></td>
+			</tr>
+			<tr>
+				<td>Gender [Select Male or Female]</td>
+				<td>
+					<input type="radio" name="g" id="gender" value="Male">Male
+					<input type="radio" name="g" id="gender1" value="Female">Female
+				</td>
+				<td><span id="g1"></span></td>
+			</tr>
+			<tr>
+				<td>Language [At least one]</td>
+				<td>
+					<input type="checkbox" id="r1" value="English">English
+					<input type="checkbox" id="r2" value="Tamil">Tamil
+				</td>
+				<td><span id="rr1"></span></td>
+			</tr>
+			<tr>
+				<td>About [Something]</td>
+				<td><textarea rows="5" cols="20" id="t" placeholder="Enter About You"></textarea></td>
+				<td><span id="t1"></span></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="submit"></td>
+				<td></td>
+			</tr>
+		</form>
+	</table>
+</body>
+</html>
