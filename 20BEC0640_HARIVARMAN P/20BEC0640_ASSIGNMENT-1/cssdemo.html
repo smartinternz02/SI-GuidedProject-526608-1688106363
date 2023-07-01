@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google form</title>
+    <link rel="stylesheet" href="CSS/style.css" type="text/css">
+</head>
+<body>
+    <center>
+    <form  class="form" action="sample.html">
+        <div><h3>Google Form</h3></div>
+        <div class="required">
+            <label for="text">Name: </label>
+            <input type="text" name="name" id="name" required>
+        </div>
+        <br>
+        <div class="required">
+            <label for="email">Email ID: </label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <br>
+        <div class="required">
+            <label for="number">Mobile No: </label>
+            <input type="text" pattern="^[1234567890]\d{9,9}$"/>
+        </div>
+        <br>
+        <div>
+            <label for="number">Graduation Year: </label>
+            <input type="number" name="name" id="name"  placeholder="YYYY" min="2000" max="2050">
+        </div>
+        <br>
+        <div>
+            <label for="date">Date Of Birth: </label>
+            <input type="date" name="date" id="date">
+        </div>
+        <br>
+        <div>
+            <p>Standing Arrears</p>
+            <input type="radio" name="arrear" required>
+            <label for="radio">yes</label>
+            <br>
+            <input type="radio" name="arrear" required>
+            <label for="radio">no</label>
+        </div>
+        <br>
+        <div class="required">
+            <label for="number">CGPA: </label>
+            <input type="float" name="number" id="number" required>
+        </div>
+        <br>
+        <div class="required">
+            <button class="sub" type="submit"> Submit</button>
+            <button class="res" type="reset">Reset</button>
+        </div>
+        
+    </form>
+    
+</center>
+</body>
+</html>
