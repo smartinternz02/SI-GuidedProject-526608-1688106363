@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Confirm Doctor</title>
+<style type="text/css">
+		body{
+	        background-color: #66ffff;
+	        background-attachment: fixed;
+	        background-size: 100%;
+        }
+        a{
+        	text-decoration: none;
+        }
+        h3{
+        	text-align: center;
+        	color: blue;
+        }
+        h2{
+        	text-align: center;
+        	color: green;
+        }
+        h1{
+        	text-align: center;
+        	color: red;
+        }
+        table{
+        	width: 90%;
+        	background-color: lightgray;
+        }
+        .web{
+	        background-color: white;
+	        background-attachment: fixed;
+	        width: 1000px;
+	        height: 950px;
+	        margin: 25px auto;
+	        box-shadow: 5px 20px 15px 15px #3d3f4238;
+        }
+        img{
+        	max-height: 10%;
+        	max-width: 10%;
+        }
+        .doctor-table {
+            width: 90%;
+            border-collapse: collapse;
+        }
+        .doctor-table th {
+            background-color: #66ffff;
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .doctor-table td {
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+        }
+        .doctor-table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .doctor-table tbody tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+        .doctor-table tbody tr:hover {
+            background-color: #eaf2ff;
+            cursor: pointer;
+        }
+        .doctor-table .name {
+            font-weight: bold;
+            color: #333;
+        }
+         .doctor-table .specialty {
+            text-transform: capitalize;
+        }
+        .doctor-table .status {
+             color: green;
+             font-weight: bold;
+        }
+        .doctor-table .status.inactive {
+             color: red;
+        }       
+</style>
+</head>
+<body>
+	<div class="web">
+		<br>
+		<h1>Doctor Appointment Booking</h1>
+		<table align="center">
+			<tr>
+				<th colspan="4"><img th:src="@{/image/patient.png}" align="center"></th>
+			</tr>
+			<tr>
+				<th><h3><a href="patient_home">Home</a></h3></th>
+				<th><h3><a href="confirm_doctor">Doctor Booking</a></h3></th>
+				<th><h3><a href="patient_login">Logout</a></h3></th>
+			</tr>
+		</table><br><h2>Doctor Details</h2><br>
+		<table class="doctor-table" align="center">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Mobile</th>
+      <th>Specialty</th>
+      <th>Experience</th>
+      <th>Location</th>
+      <th>Time</th>
+      <th>Status</th>
+      <th>Book</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>128764</td>
+      <td class="name">Dr. Hari</td>
+      <td>Male</td>
+      <td>9362221823</td>
+      <td class="specialty">Allergist</td>
+      <td class="experience">23 years</td>
+      <td>Andhara</td>
+      <td>12-09-2023<br>10:15am</td>
+      <td class="status inactive">Inactive</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>258760</td>
+      <td class="name">Dr. John Doe</td>
+      <td>Female</td>
+      <td>9862300823</td>
+      <td class="specialty">Cardiology</td>
+      <td class="experience">10 years</td>
+      <td>Chennai</td>
+      <td>02-01-2023<br>10:30am</td>
+      <td class="status active">Active</td>
+      <td><a href="wait_doctor">Book</a></td>
+    </tr>
+    <tr>
+      <td>228361</td>
+      <td class="name">Dr. Jane Smith</td>
+      <td>Male</td>
+      <td>9862371876</td>
+      <td class="specialty">Pediatrics</td>
+      <td class="experience">8 years</td>
+      <td>Karnadaka</td>
+      <td>12-09-2023<br>11:15am</td>
+      <td class="status inactive">Inactive</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>728702</td>
+      <td class="name">Dr. Janany</td>
+      <td>Female</td>
+      <td>8862371823</td>
+      <td class="specialty">Dentist</td>
+      <td class="experience">22 years</td>
+      <td>Delhi</td>
+      <td>10-09-2023<br>12:30pm</td>
+      <td class="status active">Active</td>
+      <td><a href="wait_doctor">Book</a></td>
+    </tr>
+    <tr>
+      <td>903364</td>
+      <td class="name">Dr. Smith</td>
+      <td>Male</td>
+      <td>9362371023</td>
+      <td class="specialty">Psychiatrist</td>
+      <td class="experience">18 years</td>
+      <td>kovai</td>
+      <td>22-10-2023<br>11:45am</td>
+      <td class="status active">Active</td>
+      <td><a href="wait_doctor">Book</a></td>
+    </tr>
+    <tr>
+      <td>110764</td>
+      <td class="name">Dr. Jony</td>
+      <td>Male</td>
+      <td>6362371823</td>
+      <td class="specialty">Neurologist</td>
+      <td class="experience">10 years</td>
+      <td>Mumbai</td>
+      <td>30-12-2023<br>09:30am</td>
+      <td class="status active">Active</td>
+      <td><a href="wait_doctor">Book</a></td>
+    </tr>
+    <tr>
+      <td>529764</td>
+      <td class="name">Dr. Amrith</td>
+      <td>Male</td>
+      <td>7262371823</td>
+      <td class="specialty">Psychiatrist</td>
+      <td class="experience">13 years</td>
+      <td>Pune</td>
+      <td>12-07-2023<br>01:15pm</td>
+      <td class="status inactive">Inactive</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>626763</td>
+      <td class="name">Dr. Priya</td>
+      <td>Female</td>
+      <td>9352370823</td>
+      <td class="specialty">Dermatologist</td>
+      <td class="experience">16 years</td>
+      <td>Chennai</td>
+      <td>24-05-2023<br>03:30pm</td>
+      <td class="status active">Active</td>
+      <td><a href="wait_doctor">Book</a></td>
+    </tr>
+    <tr>
+      <td>350761</td>
+      <td class="name">Dr. Sunny</td>
+      <td>Male</td>
+      <td>9862331823</td>
+      <td class="specialty">Neurologist</td>
+      <td class="experience">8 years</td>
+      <td>Kerala</td>
+      <td>12-06-2023<br>04:15pm</td>
+      <td class="status active">Active</td>
+      <td><a href="wait_doctor">Book</a></td>
+    </tr>
+  </tbody>
+</table>
+	</div>
+</body>
+</html>
