@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Confirm Booking</title>
+<style type="text/css">
+		body{
+	        background-color: #66ffff;
+	        background-attachment: fixed;
+	        background-size: 100%;
+        }
+        a{
+        	text-decoration: none;
+        }
+        h3{
+        	text-align: center;
+        	color: blue;
+        }
+        h2{
+        	text-align: center;
+        	color: green;
+        }
+        h1{
+        	text-align: center;
+        	color: red;
+        }
+        table{
+        	width: 90%;
+        	background-color: lightgray;
+        }
+        .u{
+            background-color: #00e600;
+        }
+        .d{
+            background-color: #ff3333;
+        }
+        .web{
+	        background-color: white;
+	        background-attachment: fixed;
+	        width: 1000px;
+	        height: 900px;
+	        margin: 25px auto;
+	        box-shadow: 5px 20px 15px 15px #3d3f4238;
+        }
+        img{
+        	max-height: 10%;
+        	max-width: 10%;
+        }
+        .patient-table {
+            width: 90%;
+            border-collapse: collapse;
+        }
+        .patient-table th {
+            background-color: #66ffff;
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .patient-table td {
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+        }
+        .patient-table tbody tr:nth-child(even) {
+            background-color: white;
+        }
+        .patient-table tbody tr:nth-child(odd) {
+            background-color: white;
+        }
+        .patient-table tbody tr:hover {
+            background-color: #eaf2ff;
+            cursor: pointer;
+        }
+        patient-table .name {
+            font-weight: bold;
+            color: #333;
+        }
+        .patient-table .dob {
+            font-style: italic;
+        }
+        p.u {
+             text-align:center;
+             color: green;
+        }
+        .uu {
+             text-align:center;
+             color: green;
+        }
+        .rr {
+             text-align:center;
+             color: red;
+        }
+        p.d{
+             text-align:center;
+             color: black;
+        }       
+</style>
+</head>
+<body>
+	<div class="web">
+		<br>
+		<h1>Doctor Appointment Booking</h1>
+		<table align="center">
+			<tr>
+				<th colspan="4"><img th:src="@{/image/doctor.png}" align="center"></th>
+			</tr>
+			<tr>
+				<th><h3><a href="doctor_home">Home</a></h3></th>
+				<th><h3><a href="confirm_patient">Booking Request</a></h3></th>
+				<th><h3><a href="doctor_login">Logout</a></h3></th>
+			</tr>
+		</table><br><h2>Patient Details</h2><br>
+<table class="patient-table" align="center">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Mobile</th>
+      <th>Symptoms</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="name">Siva</td>
+      <td class="dob">29 years</td>
+      <td class="gender">Male</td>
+      <td>9543271890</td>
+      <td>Fever</td>
+      <td><h4 class="uu">Confirmed</h4></td>
+    </tr>
+    <tr>
+      <td class="name">Smith</td>
+      <td class="dob">23 years</td>
+      <td class="gender">Female</td>
+      <td>9862564323</td>
+      <td>Skin Problem</td>
+      <td><h4 class="rr">Rejected</h4></td>
+    </tr>
+    <tr>
+      <td class="name">Sivani</td>
+      <td class="dob">34 years</td>
+      <td class="gender">Female</td>
+      <td>9062371823</td>
+      <td>Cold</td>
+      <td><p class="u"><a href="">Confirm</a></p>
+      <p class="d"><a href="">Reject</a></p></td>
+    </tr>
+    <tr>
+      <td class="name">Janany</td>
+      <td class="dob">30 years</td>
+      <td class="gender">Female</td>
+      <td>6362371823</td>
+      <td>Brain problem</td>
+      <td><p class="u"><a href="">Confirm</a></p>
+      <p class="d"><a href="">Reject</a></p></td>
+    </tr>
+  </tbody>
+</table>	
+	</div>
+</body>
+</html>

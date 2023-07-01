@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin</title>
+<style type="text/css">
+		body{
+	        background-color: #66ffff;
+	        background-attachment: fixed;
+	        background-size: 100%;
+        }
+        a{
+        	text-decoration: none;
+        }
+        h3{
+        	text-align: center;
+        	color: blue;
+        }
+        h2{
+        	text-align: center;
+        	color: green;
+        }
+        h1{
+        	text-align: center;
+        	color: red;
+        }
+        table{
+        	width: 90%;
+        	background-color: lightgray;
+        }
+        .web{
+	        background-color: white;
+	        background-attachment: fixed;
+	        width: 1000px;
+	        height: 600px;
+	        margin: 25px auto;
+	        box-shadow: 5px 20px 15px 15px #3d3f4238;
+        }
+        img{
+        	max-height: 10%;
+        	max-width: 10%;
+        }
+        marquee{
+             width: 50%;
+        }
+</style>
+</head>
+<body>
+	<div class="web">
+		<br>
+		<h1>Doctor Appointment Booking</h1>
+		<table align="center">
+			<tr>
+				<th colspan="4"><img th:src="@{/image/admin.png}" align="center"></th>
+			</tr>
+			<tr>
+				<th><h3><a href="admin_home">Home</a></h3></th>
+				<th><h3><a href="view_doctor">View Doctor Details</a></h3></th>
+				<th><h3><a href="view_patient">View Patient Details</a></h3></th>
+				<th><h3><a href="admin_login">Logout</a></h3></th>
+			</tr>
+		</table><br><br><br><br><br>
+		<h2 align="center"><marquee align="center">Welcome Admin!!!</marquee></h2>
+	</div>
+</body>
+</html>

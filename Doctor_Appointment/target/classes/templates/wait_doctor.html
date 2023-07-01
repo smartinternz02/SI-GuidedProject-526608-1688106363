@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Confirm Doctor</title>
+<style type="text/css">
+		body{
+	        background-color: #66ffff;
+	        background-attachment: fixed;
+	        background-size: 100%;
+        }
+        a{
+        	text-decoration: none;
+        }
+        h3{
+        	text-align: center;
+        	color: blue;
+        }
+        h2{
+        	text-align: center;
+        	color: green;
+        }
+        h1{
+        	text-align: center;
+        	color: red;
+        }
+        .head{
+        	width: 90%;
+        	background-color: lightgray;
+        }
+        .success{
+        	width: 90%;
+        	background-color: white;
+        }
+        .web{
+	        background-color: white;
+	        background-attachment: fixed;
+	        width: 1000px;
+	        height: 800px;
+	        margin: 25px auto;
+	        box-shadow: 5px 20px 15px 15px #3d3f4238;
+        }
+        img{
+        	max-height: 10%;
+        	max-width: 10%;
+        }
+        .doctor-table {
+            width: 90%;
+            border-collapse: collapse;
+        }
+        .doctor-table th {
+            background-color: #66ffff;
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .doctor-table td {
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+        }
+        .doctor-table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .doctor-table tbody tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+        .doctor-table tbody tr:hover {
+            background-color: #eaf2ff;
+            cursor: pointer;
+        }
+        .doctor-table .name {
+            font-weight: bold;
+            color: #333;
+        }
+         .doctor-table .specialty {
+            text-transform: capitalize;
+        }
+        .doctor-table .status {
+             color: green;
+             font-weight: bold;
+        }
+        .doctor-table .status.inactive {
+             color: red;
+        }       
+</style>
+</head>
+<body>
+	<div class="web">
+		<br>
+		<h1>Doctor Appointment Booking</h1>
+		<table align="center" class="head">
+			<tr>
+				<th colspan="4"><img th:src="@{/image/patient.png}" align="center"></th>
+			</tr>
+			<tr>
+				<th><h3><a href="patient_home">Home</a></h3></th>
+				<th><h3><a href="confirm_doctor">Doctor Booking</a></h3></th>
+				<th><h3><a href="patient_login">Logout</a></h3></th>
+			</tr>
+		</table><br><h2>Doctor Details</h2><br>
+		<table class="doctor-table" align="center">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Mobile</th>
+      <th>Specialty</th>
+      <th>Experience</th>
+      <th>Location</th>
+      <th>Time</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>258760</td>
+      <td class="name">Dr. John Doe</td>
+      <td>Female</td>
+      <td>9862300823</td>
+      <td class="specialty">Cardiology</td>
+      <td class="experience">10 years</td>
+      <td>Chennai</td>
+      <td>02-01-2023<br>10:30am</td>
+      <td class="status active">Active</td>
+    </tr>
+  </tbody>
+</table><br><br>
+    <table align="center" class="success"><tr><th><img th:src="@{/image/success.png}"></th></tr></table>
+    <h2>Request sent, waiting for confirmation!!!</h2>
+	</div>
+</body>
+</html>
