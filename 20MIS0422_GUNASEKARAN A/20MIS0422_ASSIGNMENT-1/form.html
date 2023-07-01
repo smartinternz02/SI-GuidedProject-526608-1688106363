@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+	<link rel="stylesheet" type="text/css" href="form.css">
+</head>
+<body>
+	<h1><i><b>Wlecome to Guna's Fruit Shop</b></i></h1>
+	<div><table align="center">
+		<form onclick="submit" action="success.html" method="post">
+			<caption>
+				<h2>Fruit Order Form</h2>
+			</caption>
+			<tr>
+				<th><label>Name</label></th>
+				<td colspan="2"><input type="text" placeholder="Enter your name" required></td>
+			</tr>
+			<tr>
+				<th><label>Phone</label></th>
+				<td colspan="2"><input type="text" placeholder="Enter your phone no" required></td>
+			</tr>
+			<tr>
+				<th><label>Email</label></th>
+				<td colspan="2"><input type="text" placeholder="Enter your email" required></td>
+			</tr>
+			<tr>
+				<th><label>Address</label></th>
+				<td colspan="2"><textarea cols="21" rows="4" placeholder="Enter your address" required></textarea></td>
+			</tr>
+			<tr>
+				<th><label>Fruits</label></th>
+				<td>
+					<input type="checkbox">Apple<br>
+					<input type="checkbox">Bannana<br>
+					<input type="checkbox">Blueberry<br>
+					<input type="checkbox">Pineapple<br>
+				</td>
+				<td>
+					<input type="checkbox">Orange<br>
+					<input type="checkbox">Plum<br>
+					<input type="checkbox">Watermillon<br>
+					<input type="checkbox">Grapes<br>
+				</td>
+			</tr>
+			<tr>
+				<th><label>Quantity<br>(Each Fruit)</label></th>
+				<td>
+					<select>
+						<option>--Select Quantity--</option>
+						<option>1kg</option>
+						<option>2kg</option>
+						<option>3kg</option>
+						<option>4kg</option>
+						<option>5kg</option>
+					</select>
+				</td>
+				<td>Min 1kg-Max 5kg</td>
+			</tr>
+			<tr>
+				<th><label>Payment</label></th>
+				<td>
+					<input type="radio" name="r">Online Payment<br>
+					<input type="radio" name="r">Credit Card
+				</td>
+				<td>
+					<input type="radio" name="r">Net Banking<br>
+					<input type="radio" name="r">Cash on Delivery
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><button type="Submit" value="Submit">Submit</td>
+				<td></td>
+			</tr>
+		</form>
+	</table></div>
+</body>
+</html>
