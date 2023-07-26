@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Doctor Registration</title>
+<style type="text/css">
+		body{
+	        background-color: #66ffff;
+	        background-attachment: fixed;
+	        background-size: 100%;
+        }
+        a{
+        	text-decoration: none;
+        }
+        h2{
+        	text-align: center;
+        	color: green;
+        }
+        h1{
+        	text-align: center;
+        	color: red;
+        }
+        .input-r{
+            margin: 0px 10px 0px 0px;
+        }
+        .input-rr{
+            margin: 0px 20px 0px 0px;
+            color: #808080;
+        }
+        .input-button{
+        	width: 30%;
+	        height: 35px;
+	        font-size: 17px;
+        	padding: 0 25px;
+        	margin-top: 15px;
+        	margin-bottom: 15px;
+        	border-radius: 30px;
+        	border: none;
+        	outline: none;
+        	box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.05);
+        	transition: .3s;
+        	background-color: greenyellow;
+        	font-family: Times New Roman;
+        }
+        .box{
+        	width: 65%;
+        	height: 50px;
+        	font-size: 17px;
+        	padding: 0 25px;
+        	margin-top: 7px;
+        	margin-bottom: 7px;
+        	border-radius: 30px;
+        	border: none;
+        	outline: none;
+        	box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.05);
+        	transition: .3s;
+        	background-color: lightgray;
+        	font-family: Times New Roman;
+        }
+        .input-box{
+        	width: 50%;
+        	height: 50px;
+        	font-size: 17px;
+        	padding: 0 25px;
+        	margin-top: 7px;
+        	margin-bottom: 7px;
+        	border-radius: 30px;
+        	border: none;
+        	outline: none;
+        	box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.05);
+        	transition: .3s;
+        	background-color: lightgray;
+        	font-family: Times New Roman;
+        }
+        .label{
+        	font-family: Times New Roman;
+        	color: #000066;
+        	font-size: 20px;
+        	margin-bottom: 15px;
+        	padding-right: 40px;
+        }
+        .web{
+	        background-color: white;
+	        background-attachment: fixed;
+	        width: 1000px;
+	        height: 1000px;
+	        margin: 25px auto;
+	        box-shadow: 5px 20px 15px 15px #3d3f4238;
+        }
+        img{
+        	max-height: 20%;
+        	max-width: 20%;
+        }
+</style>
+</head>
+<body>
+	<div class="web">
+		<br>
+		<h1>Doctor Appointment Booking</h1>
+		<table align="center">
+		    <form th:action="@{/d_success}" th:object="${doctor}" metnod="post">
+			<tr>
+				<th colspan="2"><img th:src="@{/image/doctor.png}" align="center"></th>
+			</tr>
+			<tr>
+				<th colspan="2"><h2 class="h2">Doctor Registration</h2></th>
+			</tr>
+			<tr>
+				<th><h3 class="label">Doctor ID</h3></th>
+				<div><th><input type="number" class="input-box" placeholder="Id" required></th></div>
+			</tr>
+			<tr>
+				<th><h3 class="label">Username</h3></th>
+				<div><th><input type="text" class="input-box" placeholder="Username" required></th></div>
+			</tr>
+			<tr>
+				<th><h3 class="label">Password</h3></th>
+				<div><th><input type="Password" class="input-box" placeholder="Password" required></th></div>
+			</tr>
+			<tr>
+				<th><h3 class="label">Mobile</h3></th>
+				<div><th><input type="text" class="input-box" placeholder="Mobile Number" required></th></div>
+			</tr>
+			<tr>
+				<th><h3 class="label">Gender</h3></th>
+				<div><th><input type="radio" name="gender" class="input-r"><label class="input-rr">Male</label>
+				<input type="radio" name="gender" class="input-r"><label class="input-rr">Female</label></th></div>
+			</tr>
+			<tr>
+				<th><h3 class="label">Specialist</h3></th>
+				<div><th><select class="box" required>
+					<option disabled selected>---select---</option>
+					<option>Allergist</option>
+					<option>Cardiologist</option>
+					<option>Dentist</option>
+					<option>Dermatologist</option>
+					<option>Neurologist</option>
+					<option>Psychiatrist</option>
+					<option>Pediatrics</option>
+				</select></th></div>
+			</tr>
+			<tr>
+				<th><h3 class="label">Experience</h3></th>
+				<div><th><input type="text" class="input-box" placeholder="Experience" required></th></div>
+			</tr>
+			<tr>
+				<th><h3 class="label">Location</h3></th>
+				<div><th><input type="text" class="input-box" placeholder="Location" required></th></div>
+			</tr>
+			<tr>
+				<th><h3 class="label">Timing</h3></th>
+				<div><th><input type="datetime-local" class="input-box" placeholder="time" required></th></div>
+			</tr>
+			<tr>
+				<th colspan="2"><button class="input-button" type="submit"><b>Register</b></button></th>
+			</tr>
+			</form>
+		</table>
+	</div>
+</body>
+</html>

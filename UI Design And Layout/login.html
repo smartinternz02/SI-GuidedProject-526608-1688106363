@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+<style type="text/css">
+		body{
+	        background-color: #66ffff;
+	        background-attachment: fixed;
+	        background-size: 100%;
+        }
+        a{
+        	text-decoration: none;
+        }
+        p{
+        	text-align: center;
+        }
+        table{
+        	text-align: center;
+        	width: 80%;
+        	padding-left: 185px;
+        }
+        .button{
+	        width: 60%;
+        	height: 50px;
+        	font-size: 17px;
+        	padding: 0 25px;
+        	border-radius: 30px;
+        	border: none;
+        	outline: none;
+        	box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.05);
+        	transition: .3s;
+        	background-color: greenyellow;
+        	font-family: Times New Roman;
+        }
+        h2{
+        	text-align: center;
+        	color: green;
+        }
+        h1{
+        	text-align: center;
+        	color: red;
+        }
+        div{
+	        background-color: white;
+	        background-attachment: fixed;
+	        width: 1000px;
+	        height: 600px;
+	        margin: 25px auto;
+	        box-shadow: 5px 20px 15px 15px #3d3f4238;
+        }
+        img{
+        	padding-left: 140px;
+        }
+</style>
+</head>
+<body>
+	<div>
+		<br>
+		<h1>Doctor Appointment Booking</h1>
+		<img th:src="@{/image/doctor.jpg}">
+		<table>
+			<tr>
+				<td>
+				<h2>Admin</h2>
+				<form action="/admin_login" method="post"><button class="button" type="submit"><b>Admin Login</b></button></form>
+				</td>
+				<td>
+				<h2>Doctor</h2>
+				<form action="/doctor_login" method="post"><button class="button" type="submit"><b>Doctor Login</b></button></form>
+				</td>
+				<td>
+				<h2>Patient</h2>
+				<form action="/patient_login" method="post"><button class="button" type="submit"><b>Patient Login</b></button></form>
+				</td>
+			</tr>
+		</table>
+		<br>
+		<p><b>Modern Application Development (Java Spring Boot)</b></p>
+	</div>
+</body>
+</html>

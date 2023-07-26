@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Patient Login</title>
+<style type="text/css">
+		body{
+	        background-color: #66ffff;
+	        background-attachment: fixed;
+	        background-size: 100%;
+        }
+        a{
+        	text-decoration: none;
+        }
+        h2{
+        	text-align: center;
+        	color: green;
+        }
+        h1{
+        	text-align: center;
+        	color: red;
+        }
+        .input-button{
+        	width: 30%;
+	        height: 35px;
+	        font-size: 17px;
+        	padding: 0 25px;
+        	margin-bottom: 15px;
+        	border-radius: 30px;
+        	border: none;
+        	outline: none;
+        	box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.05);
+        	transition: .3s;
+        	background-color: greenyellow;
+        	font-family: Times New Roman;
+        }
+        .input-box{
+        	width: 50%;
+        	height: 50px;
+        	font-size: 17px;
+        	padding: 0 25px;
+        	margin-bottom: 15px;
+        	border-radius: 30px;
+        	border: none;
+        	outline: none;
+        	box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.05);
+        	transition: .3s;
+        	background-color: lightgray;
+        	font-family: Times New Roman;
+        }
+        .web{
+	        background-color: white;
+	        background-attachment: fixed;
+	        width: 1000px;
+	        height: 600px;
+	        margin: 25px auto;
+	        box-shadow: 5px 20px 15px 15px #3d3f4238;
+        }
+        img{
+        	max-height: 20%;
+        	max-width: 20%;
+        }
+</style>
+</head>
+<body>
+	<div class="web">
+		<br>
+		<h1>Doctor Appointment Booking</h1>
+		<table align="center"><form action="/patient_home">
+			<tr>
+				<th><img th:src="@{/image/patient.png}" align="center"></th>
+			</tr>
+			<tr>
+				<th><h2>Patient Login</h2></th>
+			</tr>
+			<tr>
+				<div><th><input type="text" class="input-box" placeholder="Username" required></th></div>
+			</tr>
+			<tr>
+				<div><th><input type="Password" class="input-box" placeholder="Password" required></th></div>
+			</tr>
+			<tr>
+				<th><form action=""><button class="input-button" type="submit"><b>Login</b></button></form></th>
+			</tr>
+		</table></form>
+		<h4 align="center">Don't have account? <a href="patient_reg">Create account</a></h4>
+		<p align="center"><a href="home"><b>Go to Home</b></a></p>
+		<p align="center"><b>Modern Application Development (Java Spring Boot)</b></p>
+	</div>
+</body>
+</html>
